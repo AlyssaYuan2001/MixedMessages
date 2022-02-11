@@ -1,14 +1,20 @@
 const fortuneTeller = {
-    problems = ['You are getting bad grades.', 'You are inconsistent with your exercising.', 'You suck at leetcode.', 'You are bad at talk to people.', 'You dont have a friend/support group.', 'You are a sow learner.'],
-    reasons = ['You dont work smart consistently.', 'You keep prioritizing pointless things.', 'You do not proportize the right things.', 'You think you have all time in the world.', 'You are too inside your head; people dont think about you.', 'It takes time to learn something.'],
-    advices = ['Slow and steady wins the race.', 'Make sure you eating, exercsing, and sleeping enough.', 'try talk to new people irl(walk up to people.', 'getting a tracker.', 'really find your "why".', 'think about your goal.'],
+    _problems: ['You are getting bad grades.', 'You are inconsistent with your exercising.', 'You suck at leetcode.', 'You are bad at talk to people.', 'You dont have a friend/support group.', 'You are a sow learner.'],
+    _reasons: ['You dont work smart consistently.', 'You keep prioritizing pointless things.', 'You do not proportize the right things.', 'You think you have all time in the world.', 'You are too inside your head; people dont think about you.', 'It takes time to learn something.'],
+    _advices: ['Slow and steady wins the race.', 'Make sure you eating, exercsing, and sleeping enough.', 'try talk to new people irl(walk up to people.', 'getting a tracker.', 'really find your "why".', 'think about your goal.'],
     get problems() {
-        return this.problems
+        return this._problems
     },
     get reasons() {
-        return this.reasons
+        return this._reasons
     },
     get advices() {
-        return this.advices
+        return this._advices
     }
 }
+function randomIndex() {
+    let problem = fortuneTeller.problems[Math.floor(Math.random() * problems.length)]
+    let reason = fortuneTeller.reasons[Math.floor(Math.random() * reasons.length)]
+    let advice = fortuneTeller.advices[Math.floor(Math.random() * advices.length)]
+}
+console.log(randomIndex())
