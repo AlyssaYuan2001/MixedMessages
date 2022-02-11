@@ -13,8 +13,9 @@ const fortuneTeller = {
     }
 }
 function randomIndex() {
-    let problem = fortuneTeller.problems[Math.floor(Math.random() * problems.length)]
-    let reason = fortuneTeller.reasons[Math.floor(Math.random() * reasons.length)]
-    let advice = fortuneTeller.advices[Math.floor(Math.random() * advices.length)]
+    let problem = fortuneTeller._problems[Math.floor(Math.random() * fortuneTeller._problems.length)]
+    let reason = fortuneTeller._reasons[Math.floor(Math.random() * fortuneTeller._reasons.length)]
+    let advice = fortuneTeller._advices[Math.floor(Math.random() * fortuneTeller._advices.length)]
+    return advice
 }
 console.log(randomIndex())
